@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Parser</title>
+    <style>
+      #data_input {
+        width: 800px;
+        height: 500px;
+      }
+      #filepath {
+        width: 500px;
+      }
+    </style>
+</head>
+<body>
+    <h3>Form</h3>
+    <form action="/submit" method="POST">
+        <label for="filepath">File path:</label>
+        <input id="filepath" name="filepath"></input>
+        <br><br>
+        <label for="data_input">Prompt:</label>
+        <textarea id="data_input" name="data_input" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

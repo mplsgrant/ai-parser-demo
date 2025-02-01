@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Box Submit Example</title>
+    <script>
+        function handleSubmit() {
+            // Get the value from the text box
+            const userInput = document.getElementById('userInput').value;
+            
+            // Call the function with the input text
+            runFunction(userInput);
+        }
+
+        function runFunction(input) {
+            // Here you can do anything with the input
+            console.log('Text entered:', input);
+            alert('You entered: ' + input);
+        }
+    </script>
+    <style>
+  #userInput {
+    width: 300px;
+    height: 40px;
+  }
+</style>
+
+</head>
+<body>
+    <h1>Text Box Submit Example</h1>
+
+    <input type="text" id="userInput" placeholder="Enter some text">
+    <button onclick="handleSubmit()">Submit</button>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processed Result</title>
+    <style>
+      #results {
+        width: 1200px;
+        height: 800px;
+      }
+    </style>
+</head>
+<body>
+    <button id="downloadBtn">Download file</button>
+    <script>
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+        var textareaContent = document.getElementById('results').value;
+        var blob = new Blob([textareaContent], { type: 'text/plain' });
+        var link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'textarea-content.txt';
+        link.click();
+    });
+    </script>
+    <h1>Processed Data</h1>
+    <textarea id="results">{{ processed_data }}</textarea>
+    <a href="/">Go Back</a>
+</body>
+</html>
